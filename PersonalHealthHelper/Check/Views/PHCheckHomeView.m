@@ -9,8 +9,8 @@
 #import "PHCheckHomeView.h"
 #import "Masonry.h"
 
-#define PHBtnNormalTitle @"健康诊断"
-#define PHBtnHeightTitle @"停止诊断"
+#define PHBtnNormalTitle @"疾病查询"
+#define PHBtnHeightTitle @"停止查询"
 #define PHRectHeight 200
 
 @interface PHCheckHomeView ()
@@ -67,10 +67,11 @@
         UIButton *moreButton = [[UIButton alloc]init];
         self.moreButton = moreButton;
         [self addSubview:moreButton];
-        [moreButton setTitle:@"健康诊断" forState:UIControlStateNormal];
+        [moreButton setTitle:PHBtnNormalTitle forState:UIControlStateNormal];
         [moreButton addTarget:self action:@selector(checkHealthy) forControlEvents:UIControlEventTouchUpInside];
         [self constraintMoreButton];
         moreButton.backgroundColor = [UIColor greenColor];
+        self.speratorView.hidden = YES;
     }
     return self;
 }
@@ -112,14 +113,19 @@
  *  结束扫描
  */
 - (void)endCheck {
-    [self.timer invalidate];
+    if (self.timeInterval){
+        [self.timer invalidate];
+    }
+    self.speratorView.hidden = YES;
     self.timeInterval = 0;
 }
 
 - (void)healthCheck {
     if (self.timeInterval > 4) {
-        [self endCheck];
+        [self checkHealthy];
+        return;
     }
+    self.speratorView.hidden = NO;
     self.timeInterval++;
     [UIView animateWithDuration:0.75 animations:^{
         [self updateSperatorViewConstraintsWithY:0];
@@ -169,7 +175,7 @@
     [self.speratorView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.width.equalTo(weakSelf.rectView);
         make.height.equalTo(@1);
-        make.bottom.equalTo(weakSelf.rectView.mas_top);
+        make.bottom.equalTo(weakSelf.rectView.mas_top).offset(PHRectHeight);
         make.centerX.equalTo(weakSelf.rectView);
     }];
 }
