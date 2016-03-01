@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  PHTabBarViewController.h
 //  PersonalHealthHelper
 //
 //  Created by lifan on 16/3/1.
@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
-
+@interface PHTabBarViewController : UITabBarController
 
 @end
-

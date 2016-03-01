@@ -9,12 +9,19 @@
 /* Begin PBXBuildFile section */
 		CEA1053E1C8579CC007BF5DB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CEA1053D1C8579CC007BF5DB /* main.m */; };
 		CEA105411C8579CC007BF5DB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CEA105401C8579CC007BF5DB /* AppDelegate.m */; };
-		CEA105441C8579CC007BF5DB /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CEA105431C8579CC007BF5DB /* ViewController.m */; };
-		CEA105471C8579CC007BF5DB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEA105451C8579CC007BF5DB /* Main.storyboard */; };
 		CEA105491C8579CC007BF5DB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CEA105481C8579CC007BF5DB /* Assets.xcassets */; };
 		CEA1054C1C8579CC007BF5DB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEA1054A1C8579CC007BF5DB /* LaunchScreen.storyboard */; };
 		CEA105571C8579CD007BF5DB /* PersonalHealthHelperTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CEA105561C8579CD007BF5DB /* PersonalHealthHelperTests.m */; };
 		CEA105621C8579CD007BF5DB /* PersonalHealthHelperUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = CEA105611C8579CD007BF5DB /* PersonalHealthHelperUITests.m */; };
+		CEA105871C857A3F007BF5DB /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEA1057A1C857A08007BF5DB /* Alamofire.framework */; };
+		CEA105881C857A3F007BF5DB /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CEA1057A1C857A08007BF5DB /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		CEA1058D1C857A6A007BF5DB /* ShowApiRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA1058C1C857A6A007BF5DB /* ShowApiRequest.swift */; };
+		CEA105A41C857E69007BF5DB /* PHInformationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CEA105A31C857E69007BF5DB /* PHInformationViewController.m */; };
+		CEA105A71C857E7C007BF5DB /* PHLibraryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CEA105A61C857E7C007BF5DB /* PHLibraryViewController.m */; };
+		CEA105AA1C857E8C007BF5DB /* PHCheckViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CEA105A91C857E8C007BF5DB /* PHCheckViewController.m */; };
+		CEA105AD1C857EA4007BF5DB /* PHSettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CEA105AC1C857EA4007BF5DB /* PHSettingViewController.m */; };
+		CEA105B01C857F76007BF5DB /* PHTabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CEA105AF1C857F76007BF5DB /* PHTabBarViewController.m */; };
+		CEA105B21C858136007BF5DB /* Foundation+Log.m in Sources */ = {isa = PBXBuildFile; fileRef = CEA105B11C858136007BF5DB /* Foundation+Log.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,16 +39,83 @@
 			remoteGlobalIDString = CEA105381C8579CC007BF5DB;
 			remoteInfo = PersonalHealthHelper;
 		};
+		CEA105791C857A08007BF5DB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CEA1056F1C857A08007BF5DB /* Alamofire.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = F8111E3319A95C8B0040E7D1;
+			remoteInfo = "Alamofire iOS";
+		};
+		CEA1057B1C857A08007BF5DB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CEA1056F1C857A08007BF5DB /* Alamofire.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = F8111E3E19A95C8B0040E7D1;
+			remoteInfo = "Alamofire iOS Tests";
+		};
+		CEA1057D1C857A08007BF5DB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CEA1056F1C857A08007BF5DB /* Alamofire.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 4DD67C0B1A5C55C900ED2280;
+			remoteInfo = "Alamofire OSX";
+		};
+		CEA1057F1C857A08007BF5DB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CEA1056F1C857A08007BF5DB /* Alamofire.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = F829C6B21A7A94F100A2CD59;
+			remoteInfo = "Alamofire OSX Tests";
+		};
+		CEA105811C857A08007BF5DB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CEA1056F1C857A08007BF5DB /* Alamofire.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 4CF626EF1BA7CB3E0011A099;
+			remoteInfo = "Alamofire tvOS";
+		};
+		CEA105831C857A08007BF5DB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CEA1056F1C857A08007BF5DB /* Alamofire.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 4CF626F81BA7CB3E0011A099;
+			remoteInfo = "Alamofire tvOS Tests";
+		};
+		CEA105851C857A08007BF5DB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CEA1056F1C857A08007BF5DB /* Alamofire.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = E4202FE01B667AA100C997FB;
+			remoteInfo = "Alamofire watchOS";
+		};
+		CEA105891C857A3F007BF5DB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CEA1056F1C857A08007BF5DB /* Alamofire.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = F8111E3219A95C8B0040E7D1;
+			remoteInfo = "Alamofire iOS";
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		CEA1058B1C857A40007BF5DB /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				CEA105881C857A3F007BF5DB /* Alamofire.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		CEA105391C8579CC007BF5DB /* PersonalHealthHelper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PersonalHealthHelper.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEA1053D1C8579CC007BF5DB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		CEA1053F1C8579CC007BF5DB /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		CEA105401C8579CC007BF5DB /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		CEA105421C8579CC007BF5DB /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		CEA105431C8579CC007BF5DB /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		CEA105461C8579CC007BF5DB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CEA105481C8579CC007BF5DB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CEA1054B1C8579CC007BF5DB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CEA1054D1C8579CC007BF5DB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -51,6 +125,21 @@
 		CEA1055D1C8579CD007BF5DB /* PersonalHealthHelperUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PersonalHealthHelperUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEA105611C8579CD007BF5DB /* PersonalHealthHelperUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PersonalHealthHelperUITests.m; sourceTree = "<group>"; };
 		CEA105631C8579CD007BF5DB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CEA1056F1C857A08007BF5DB /* Alamofire.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Alamofire.xcodeproj; path = "../../Downloads/SafariDownload/图灵机器人/Alamofire/Alamofire.xcodeproj"; sourceTree = "<group>"; };
+		CEA1058C1C857A6A007BF5DB /* ShowApiRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowApiRequest.swift; sourceTree = "<group>"; };
+		CEA1058E1C857A85007BF5DB /* ShowApiRequest-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ShowApiRequest-Bridging-Header.h"; sourceTree = "<group>"; };
+		CEA1058F1C857B3C007BF5DB /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PrefixHeader.pch; path = ../PrefixHeader.pch; sourceTree = "<group>"; };
+		CEA105A21C857E69007BF5DB /* PHInformationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PHInformationViewController.h; sourceTree = "<group>"; };
+		CEA105A31C857E69007BF5DB /* PHInformationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PHInformationViewController.m; sourceTree = "<group>"; };
+		CEA105A51C857E7C007BF5DB /* PHLibraryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PHLibraryViewController.h; sourceTree = "<group>"; };
+		CEA105A61C857E7C007BF5DB /* PHLibraryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PHLibraryViewController.m; sourceTree = "<group>"; };
+		CEA105A81C857E8C007BF5DB /* PHCheckViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PHCheckViewController.h; sourceTree = "<group>"; };
+		CEA105A91C857E8C007BF5DB /* PHCheckViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PHCheckViewController.m; sourceTree = "<group>"; };
+		CEA105AB1C857EA4007BF5DB /* PHSettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PHSettingViewController.h; sourceTree = "<group>"; };
+		CEA105AC1C857EA4007BF5DB /* PHSettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PHSettingViewController.m; sourceTree = "<group>"; };
+		CEA105AE1C857F76007BF5DB /* PHTabBarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PHTabBarViewController.h; sourceTree = "<group>"; };
+		CEA105AF1C857F76007BF5DB /* PHTabBarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PHTabBarViewController.m; sourceTree = "<group>"; };
+		CEA105B11C858136007BF5DB /* Foundation+Log.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Foundation+Log.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +147,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CEA105871C857A3F007BF5DB /* Alamofire.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,6 +171,8 @@
 		CEA105301C8579CC007BF5DB = {
 			isa = PBXGroup;
 			children = (
+				CEA1058E1C857A85007BF5DB /* ShowApiRequest-Bridging-Header.h */,
+				CEA1056F1C857A08007BF5DB /* Alamofire.xcodeproj */,
 				CEA1053B1C8579CC007BF5DB /* PersonalHealthHelper */,
 				CEA105551C8579CD007BF5DB /* PersonalHealthHelperTests */,
 				CEA105601C8579CD007BF5DB /* PersonalHealthHelperUITests */,
@@ -101,14 +193,12 @@
 		CEA1053B1C8579CC007BF5DB /* PersonalHealthHelper */ = {
 			isa = PBXGroup;
 			children = (
-				CEA1053F1C8579CC007BF5DB /* AppDelegate.h */,
-				CEA105401C8579CC007BF5DB /* AppDelegate.m */,
-				CEA105421C8579CC007BF5DB /* ViewController.h */,
-				CEA105431C8579CC007BF5DB /* ViewController.m */,
-				CEA105451C8579CC007BF5DB /* Main.storyboard */,
+				CEA105941C857D90007BF5DB /* Information(资讯) */,
+				CEA105981C857D90007BF5DB /* Library(图书) */,
+				CEA105901C857D90007BF5DB /* Check(查询) */,
+				CEA105A11C857D90007BF5DB /* Setting(个人中心) */,
+				CEA1059C1C857D90007BF5DB /* Other */,
 				CEA105481C8579CC007BF5DB /* Assets.xcassets */,
-				CEA1054A1C8579CC007BF5DB /* LaunchScreen.storyboard */,
-				CEA1054D1C8579CC007BF5DB /* Info.plist */,
 				CEA1053C1C8579CC007BF5DB /* Supporting Files */,
 			);
 			path = PersonalHealthHelper;
@@ -117,6 +207,11 @@
 		CEA1053C1C8579CC007BF5DB /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				CEA1058C1C857A6A007BF5DB /* ShowApiRequest.swift */,
+				CEA1053F1C8579CC007BF5DB /* AppDelegate.h */,
+				CEA105401C8579CC007BF5DB /* AppDelegate.m */,
+				CEA1054A1C8579CC007BF5DB /* LaunchScreen.storyboard */,
+				CEA1054D1C8579CC007BF5DB /* Info.plist */,
 				CEA1053D1C8579CC007BF5DB /* main.m */,
 			);
 			name = "Supporting Files";
@@ -140,6 +235,175 @@
 			path = PersonalHealthHelperUITests;
 			sourceTree = "<group>";
 		};
+		CEA105701C857A08007BF5DB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CEA1057A1C857A08007BF5DB /* Alamofire.framework */,
+				CEA1057C1C857A08007BF5DB /* Alamofire iOS Tests.xctest */,
+				CEA1057E1C857A08007BF5DB /* Alamofire.framework */,
+				CEA105801C857A08007BF5DB /* Alamofire OSX Tests.xctest */,
+				CEA105821C857A08007BF5DB /* Alamofire.framework */,
+				CEA105841C857A08007BF5DB /* Alamofire tvOS Tests.xctest */,
+				CEA105861C857A08007BF5DB /* Alamofire.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CEA105901C857D90007BF5DB /* Check(查询) */ = {
+			isa = PBXGroup;
+			children = (
+				CEA105911C857D90007BF5DB /* Models */,
+				CEA105921C857D90007BF5DB /* ViewControllers */,
+				CEA105931C857D90007BF5DB /* Views */,
+			);
+			name = "Check(查询)";
+			path = Check;
+			sourceTree = "<group>";
+		};
+		CEA105911C857D90007BF5DB /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		CEA105921C857D90007BF5DB /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				CEA105A81C857E8C007BF5DB /* PHCheckViewController.h */,
+				CEA105A91C857E8C007BF5DB /* PHCheckViewController.m */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		CEA105931C857D90007BF5DB /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		CEA105941C857D90007BF5DB /* Information(资讯) */ = {
+			isa = PBXGroup;
+			children = (
+				CEA105951C857D90007BF5DB /* Models */,
+				CEA105961C857D90007BF5DB /* ViewControllers */,
+				CEA105971C857D90007BF5DB /* Views */,
+			);
+			name = "Information(资讯)";
+			path = Information;
+			sourceTree = "<group>";
+		};
+		CEA105951C857D90007BF5DB /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		CEA105961C857D90007BF5DB /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				CEA105A21C857E69007BF5DB /* PHInformationViewController.h */,
+				CEA105A31C857E69007BF5DB /* PHInformationViewController.m */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		CEA105971C857D90007BF5DB /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		CEA105981C857D90007BF5DB /* Library(图书) */ = {
+			isa = PBXGroup;
+			children = (
+				CEA105991C857D90007BF5DB /* Models */,
+				CEA1059A1C857D90007BF5DB /* ViewControllers */,
+				CEA1059B1C857D90007BF5DB /* Views */,
+			);
+			name = "Library(图书)";
+			path = Library;
+			sourceTree = "<group>";
+		};
+		CEA105991C857D90007BF5DB /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		CEA1059A1C857D90007BF5DB /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				CEA105A51C857E7C007BF5DB /* PHLibraryViewController.h */,
+				CEA105A61C857E7C007BF5DB /* PHLibraryViewController.m */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		CEA1059B1C857D90007BF5DB /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		CEA1059C1C857D90007BF5DB /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				CEA1058F1C857B3C007BF5DB /* PrefixHeader.pch */,
+				CEA1059D1C857D90007BF5DB /* Models */,
+				CEA1059E1C857D90007BF5DB /* Tools */,
+				CEA1059F1C857D90007BF5DB /* ViewControllers */,
+				CEA105A01C857D90007BF5DB /* Views */,
+			);
+			path = Other;
+			sourceTree = "<group>";
+		};
+		CEA1059D1C857D90007BF5DB /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		CEA1059E1C857D90007BF5DB /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+				CEA105B11C858136007BF5DB /* Foundation+Log.m */,
+			);
+			path = Tools;
+			sourceTree = "<group>";
+		};
+		CEA1059F1C857D90007BF5DB /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				CEA105AE1C857F76007BF5DB /* PHTabBarViewController.h */,
+				CEA105AF1C857F76007BF5DB /* PHTabBarViewController.m */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		CEA105A01C857D90007BF5DB /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		CEA105A11C857D90007BF5DB /* Setting(个人中心) */ = {
+			isa = PBXGroup;
+			children = (
+				CEA105AB1C857EA4007BF5DB /* PHSettingViewController.h */,
+				CEA105AC1C857EA4007BF5DB /* PHSettingViewController.m */,
+			);
+			name = "Setting(个人中心)";
+			path = Setting;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -150,10 +414,12 @@
 				CEA105351C8579CC007BF5DB /* Sources */,
 				CEA105361C8579CC007BF5DB /* Frameworks */,
 				CEA105371C8579CC007BF5DB /* Resources */,
+				CEA1058B1C857A40007BF5DB /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				CEA1058A1C857A3F007BF5DB /* PBXTargetDependency */,
 			);
 			name = PersonalHealthHelper;
 			productName = PersonalHealthHelper;
@@ -202,6 +468,7 @@
 		CEA105311C8579CC007BF5DB /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = PH;
 				LastUpgradeCheck = 0720;
 				ORGANIZATIONNAME = PH;
 				TargetAttributes = {
@@ -232,6 +499,12 @@
 			mainGroup = CEA105301C8579CC007BF5DB;
 			productRefGroup = CEA1053A1C8579CC007BF5DB /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = CEA105701C857A08007BF5DB /* Products */;
+					ProjectRef = CEA1056F1C857A08007BF5DB /* Alamofire.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				CEA105381C8579CC007BF5DB /* PersonalHealthHelper */,
@@ -241,6 +514,58 @@
 		};
 /* End PBXProject section */
 
+/* Begin PBXReferenceProxy section */
+		CEA1057A1C857A08007BF5DB /* Alamofire.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Alamofire.framework;
+			remoteRef = CEA105791C857A08007BF5DB /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		CEA1057C1C857A08007BF5DB /* Alamofire iOS Tests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "Alamofire iOS Tests.xctest";
+			remoteRef = CEA1057B1C857A08007BF5DB /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		CEA1057E1C857A08007BF5DB /* Alamofire.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Alamofire.framework;
+			remoteRef = CEA1057D1C857A08007BF5DB /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		CEA105801C857A08007BF5DB /* Alamofire OSX Tests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "Alamofire OSX Tests.xctest";
+			remoteRef = CEA1057F1C857A08007BF5DB /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		CEA105821C857A08007BF5DB /* Alamofire.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Alamofire.framework;
+			remoteRef = CEA105811C857A08007BF5DB /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		CEA105841C857A08007BF5DB /* Alamofire tvOS Tests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "Alamofire tvOS Tests.xctest";
+			remoteRef = CEA105831C857A08007BF5DB /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		CEA105861C857A08007BF5DB /* Alamofire.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Alamofire.framework;
+			remoteRef = CEA105851C857A08007BF5DB /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
 /* Begin PBXResourcesBuildPhase section */
 		CEA105371C8579CC007BF5DB /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
@@ -248,7 +573,6 @@
 			files = (
 				CEA1054C1C8579CC007BF5DB /* LaunchScreen.storyboard in Resources */,
 				CEA105491C8579CC007BF5DB /* Assets.xcassets in Resources */,
-				CEA105471C8579CC007BF5DB /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -273,9 +597,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CEA105441C8579CC007BF5DB /* ViewController.m in Sources */,
 				CEA105411C8579CC007BF5DB /* AppDelegate.m in Sources */,
+				CEA105A41C857E69007BF5DB /* PHInformationViewController.m in Sources */,
 				CEA1053E1C8579CC007BF5DB /* main.m in Sources */,
+				CEA105A71C857E7C007BF5DB /* PHLibraryViewController.m in Sources */,
+				CEA1058D1C857A6A007BF5DB /* ShowApiRequest.swift in Sources */,
+				CEA105B21C858136007BF5DB /* Foundation+Log.m in Sources */,
+				CEA105AD1C857EA4007BF5DB /* PHSettingViewController.m in Sources */,
+				CEA105B01C857F76007BF5DB /* PHTabBarViewController.m in Sources */,
+				CEA105AA1C857E8C007BF5DB /* PHCheckViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -308,17 +638,14 @@
 			target = CEA105381C8579CC007BF5DB /* PersonalHealthHelper */;
 			targetProxy = CEA1055E1C8579CD007BF5DB /* PBXContainerItemProxy */;
 		};
+		CEA1058A1C857A3F007BF5DB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Alamofire iOS";
+			targetProxy = CEA105891C857A3F007BF5DB /* PBXContainerItemProxy */;
+		};
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		CEA105451C8579CC007BF5DB /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				CEA105461C8579CC007BF5DB /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		CEA1054A1C8579CC007BF5DB /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -414,10 +741,16 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/PersonalHealthHelper/PrefixHeader.pch";
 				INFOPLIST_FILE = PersonalHealthHelper/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ph.PersonalHealthHelper;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "ShowApiRequest-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				USER_HEADER_SEARCH_PATHS = "$(SRCROOT)/**";
 			};
 			name = Debug;
 		};
@@ -425,10 +758,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/PersonalHealthHelper/PrefixHeader.pch";
 				INFOPLIST_FILE = PersonalHealthHelper/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ph.PersonalHealthHelper;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "ShowApiRequest-Bridging-Header.h";
+				USER_HEADER_SEARCH_PATHS = "$(SRCROOT)/**";
 			};
 			name = Release;
 		};

@@ -7,7 +7,7 @@
 //
 
 #import "AppDelegate.h"
-
+#import "PHTabBarViewController.h"
 @interface AppDelegate ()
 
 @end
@@ -16,8 +16,15 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
+    [self configRootViewController];
+    [self.window makeKeyAndVisible];
     return YES;
+}
+
+- (void)configRootViewController {
+    PHTabBarViewController *tabBarVC = [[PHTabBarViewController alloc] init];
+    self.window.rootViewController = tabBarVC;
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {
