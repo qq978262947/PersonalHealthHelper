@@ -14,8 +14,5 @@
 + (instancetype)homeView;
 
 
-+ (instancetype)homeViewWithFrame:(CGRect)frame;
-
-
 
 @end
