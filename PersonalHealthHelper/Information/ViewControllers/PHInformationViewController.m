@@ -8,6 +8,7 @@
 
 #import "PHInformationViewController.h"
 #import "PersonalHealthHelper-Swift.h"
+#import "PHMsgTableView.h"
 
 #import "NSDate+Formatter.h"
 #import "NSString+MD5.h"
@@ -15,9 +16,11 @@
 #import "PHBtnsBar.h"
 
 #import "PHHMModel.h"
-@interface PHInformationViewController ()<PHBtnsBarDelegate>
+@interface PHInformationViewController ()<PHBtnsBarDelegate,UIScrollViewDelegate>
 @property (nonatomic,strong)NSMutableArray * listArray;
-@property (nonatomic,strong)UIView * scrollBtn;
+@property (nonatomic,strong)PHBtnsBar * scrollBtn;
+
+@property (nonatomic,strong)UIScrollView * scrollView;
 @end
 
 @implementation PHInformationViewController
@@ -30,9 +33,11 @@
     }
     return _listArray;
 }
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    self.automaticallyAdjustsScrollViewInsets=NO;
     self.title=@"资讯";
     [self downLoadData];
 
@@ -75,7 +80,6 @@
                     PHHMModel * mod= [PHHMModel modWithDict:tempDict];
                     [self.listArray addObject:mod];
                 }
-                NSLog(@"%@",self.listArray);
                 //获取数据成功，分页展示
                 [self createScrollBtn];
             }
@@ -99,7 +103,31 @@
     }
     PHBtnsBar * btnsbar=[PHBtnsBar btnsBarWithFrame:CGRectMake(0, NAVH+20,SCRW , BTNH) andNameArray:names];
     [self.view addSubview:btnsbar];
+    self.scrollBtn=btnsbar;
     btnsbar.delegate=self;
+    [self configTableVeiws];
+}
+-(void)configTableVeiws
+{
+    UIScrollView * scrollView=[[UIScrollView alloc]initWithFrame:CGRectMake(0, NAVH+BTNH+20, SCRW, SCRH-NAVH-BTNH-20-TabbarH)];
+    [self.view addSubview:scrollView];
+    self.scrollView=scrollView;
+    scrollView.autoresizesSubviews=NO;
+    scrollView.backgroundColor=[UIColor greenColor];
+    scrollView.pagingEnabled=YES;
+    scrollView.delegate=self;
+    
+    scrollView.contentSize=CGSizeMake(scrollView.frame.size.width*self.listArray.count, scrollView.frame.size.height);
+    for (int i = 0; i < self.listArray.count;i++)
+    {
+        PHHMModel * mod= self.listArray[i];
+        NSNumber * tid=mod.ID;
+        CGRect frame= CGRectMake(i*scrollView.frame.size.width, 0, scrollView.frame.size.width, scrollView.frame.size.height);
+        
+        PHMsgTableView * table=[PHMsgTableView phmsgTableViewWithFrame:frame andtid:tid];
+        [self.scrollView addSubview:table];
+        NSLog(@"%@",NSStringFromCGRect(table.frame));
+    }
 }
 //获取具体每一条数据
 -(void)downLoadRowsMsgWithModel
@@ -166,14 +194,19 @@
      showapi_timestamp=20160301142507&
      tid=&
      showapi_sign=41b2bffeb985997cd485d8db08836fd9
-     
      */
+}
+#pragma mark ScrollViewDelegate
+-(void)scrollViewDidScroll:(UIScrollView *)scrollView
+{
+    self.scrollBtn.selectNumber=(scrollView.contentOffset.x+150)/scrollView.frame.size.width;
 }
 #pragma  mark PHBtnsBarDelegate
 -(void)phBtnBar:(PHBtnsBar *)bar btnTouchWihtTag:(NSInteger)tag
 {
     //通过代理实现跳转
-    
+    CGPoint point = CGPointMake(tag*self.scrollView.frame.size.width, 0);
+    self.scrollView.contentOffset=point;
 }
 
 - (void)didReceiveMemoryWarning

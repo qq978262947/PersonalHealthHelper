@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 
 @interface PHHMModel : NSObject
-@property (nonatomic,strong)NSString * ID;
+@property (nonatomic,strong)NSNumber * ID;
 @property (nonatomic,strong)NSString * name;
 
 +(PHHMModel *)modWithDict:(NSDictionary *)dict;

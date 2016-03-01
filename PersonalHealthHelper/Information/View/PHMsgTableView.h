@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface PHMsgTableController : UITableViewController
+@interface PHMsgTableView : UITableView
 
 @property (nonatomic,strong)NSNumber * tid;
 

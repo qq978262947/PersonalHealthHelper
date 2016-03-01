@@ -35,7 +35,10 @@
 		FCC3253D1C8599B60030C6E1 /* NSString+MD5.m in Sources */ = {isa = PBXBuildFile; fileRef = FCC325271C8599B60030C6E1 /* NSString+MD5.m */; };
 		FCC3253E1C8599B60030C6E1 /* UITabBarController+Common.m in Sources */ = {isa = PBXBuildFile; fileRef = FCC3252B1C8599B60030C6E1 /* UITabBarController+Common.m */; };
 		FCC3254D1C85AECB0030C6E1 /* PHBtnsBar.m in Sources */ = {isa = PBXBuildFile; fileRef = FCC3254C1C85AECB0030C6E1 /* PHBtnsBar.m */; };
-		FCC325531C85BC7F0030C6E1 /* PHMsgTableController.m in Sources */ = {isa = PBXBuildFile; fileRef = FCC325521C85BC7F0030C6E1 /* PHMsgTableController.m */; };
+		FCC325531C85BC7F0030C6E1 /* PHMsgTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = FCC325521C85BC7F0030C6E1 /* PHMsgTableView.m */; };
+		FCC325561C85C06D0030C6E1 /* PHMsgTableMod.m in Sources */ = {isa = PBXBuildFile; fileRef = FCC325551C85C06D0030C6E1 /* PHMsgTableMod.m */; };
+		FCC3255D1C85C3B10030C6E1 /* PHMsgCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FCC3255B1C85C3B10030C6E1 /* PHMsgCell.m */; };
+		FCC3255E1C85C3B10030C6E1 /* PHMsgCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FCC3255C1C85C3B10030C6E1 /* PHMsgCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -161,7 +164,6 @@
 		FCC3250B1C8599B60030C6E1 /* PHHMModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PHHMModel.m; sourceTree = "<group>"; };
 		FCC3250E1C8599B60030C6E1 /* PHNetHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PHNetHelper.h; sourceTree = "<group>"; };
 		FCC3250F1C8599B60030C6E1 /* PHNetHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PHNetHelper.m; sourceTree = "<group>"; };
-		FCC325101C8599B60030C6E1 /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PrefixHeader.pch; path = Third_Others/PrefixHeader.pch; sourceTree = "<group>"; };
 		FCC325131C8599B60030C6E1 /* UIButton+Common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+Common.h"; sourceTree = "<group>"; };
 		FCC325141C8599B60030C6E1 /* UIButton+Common.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+Common.m"; sourceTree = "<group>"; };
 		FCC325161C8599B60030C6E1 /* NSDate+Formatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+Formatter.h"; sourceTree = "<group>"; };
@@ -184,8 +186,13 @@
 		FCC3252B1C8599B60030C6E1 /* UITabBarController+Common.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITabBarController+Common.m"; sourceTree = "<group>"; };
 		FCC3254B1C85AECB0030C6E1 /* PHBtnsBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PHBtnsBar.h; sourceTree = "<group>"; };
 		FCC3254C1C85AECB0030C6E1 /* PHBtnsBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PHBtnsBar.m; sourceTree = "<group>"; };
-		FCC325511C85BC7F0030C6E1 /* PHMsgTableController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PHMsgTableController.h; path = ../View/PHMsgTableController.h; sourceTree = "<group>"; };
-		FCC325521C85BC7F0030C6E1 /* PHMsgTableController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PHMsgTableController.m; path = ../View/PHMsgTableController.m; sourceTree = "<group>"; };
+		FCC325511C85BC7F0030C6E1 /* PHMsgTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PHMsgTableView.h; sourceTree = "<group>"; };
+		FCC325521C85BC7F0030C6E1 /* PHMsgTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PHMsgTableView.m; sourceTree = "<group>"; };
+		FCC325541C85C06D0030C6E1 /* PHMsgTableMod.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PHMsgTableMod.h; sourceTree = "<group>"; };
+		FCC325551C85C06D0030C6E1 /* PHMsgTableMod.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PHMsgTableMod.m; sourceTree = "<group>"; };
+		FCC3255A1C85C3B10030C6E1 /* PHMsgCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PHMsgCell.h; sourceTree = "<group>"; };
+		FCC3255B1C85C3B10030C6E1 /* PHMsgCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PHMsgCell.m; sourceTree = "<group>"; };
+		FCC3255C1C85C3B10030C6E1 /* PHMsgCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PHMsgCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -338,7 +345,6 @@
 		CEA105941C857D90007BF5DB /* Information(资讯) */ = {
 			isa = PBXGroup;
 			children = (
-				FCC325101C8599B60030C6E1 /* PrefixHeader.pch */,
 				FCC325091C8599B60030C6E1 /* Mode */,
 				FCC3250C1C8599B60030C6E1 /* Third_Others */,
 				FCC325331C8599B60030C6E1 /* View */,
@@ -351,8 +357,6 @@
 		CEA105961C857D90007BF5DB /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				FCC325511C85BC7F0030C6E1 /* PHMsgTableController.h */,
-				FCC325521C85BC7F0030C6E1 /* PHMsgTableController.m */,
 				CEA105A21C857E69007BF5DB /* PHInformationViewController.h */,
 				CEA105A31C857E69007BF5DB /* PHInformationViewController.m */,
 			);
@@ -465,6 +469,8 @@
 			children = (
 				FCC3250A1C8599B60030C6E1 /* PHHMModel.h */,
 				FCC3250B1C8599B60030C6E1 /* PHHMModel.m */,
+				FCC325541C85C06D0030C6E1 /* PHMsgTableMod.h */,
+				FCC325551C85C06D0030C6E1 /* PHMsgTableMod.m */,
 			);
 			path = Mode;
 			sourceTree = "<group>";
@@ -566,6 +572,11 @@
 		FCC325331C8599B60030C6E1 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				FCC325511C85BC7F0030C6E1 /* PHMsgTableView.h */,
+				FCC325521C85BC7F0030C6E1 /* PHMsgTableView.m */,
+				FCC3255A1C85C3B10030C6E1 /* PHMsgCell.h */,
+				FCC3255B1C85C3B10030C6E1 /* PHMsgCell.m */,
+				FCC3255C1C85C3B10030C6E1 /* PHMsgCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -750,6 +761,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CEA1054C1C8579CC007BF5DB /* LaunchScreen.storyboard in Resources */,
+				FCC3255E1C85C3B10030C6E1 /* PHMsgCell.xib in Resources */,
 				CEA105491C8579CC007BF5DB /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -823,7 +835,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FCC325531C85BC7F0030C6E1 /* PHMsgTableController.m in Sources */,
+				FCC325531C85BC7F0030C6E1 /* PHMsgTableView.m in Sources */,
+				FCC325561C85C06D0030C6E1 /* PHMsgTableMod.m in Sources */,
 				CEA105411C8579CC007BF5DB /* AppDelegate.m in Sources */,
 				FCC3253B1C8599B60030C6E1 /* UIImage+Common.m in Sources */,
 				CEA105A41C857E69007BF5DB /* PHInformationViewController.m in Sources */,
@@ -835,6 +848,7 @@
 				FCC3254D1C85AECB0030C6E1 /* PHBtnsBar.m in Sources */,
 				FCC3253E1C8599B60030C6E1 /* UITabBarController+Common.m in Sources */,
 				FCC3253D1C8599B60030C6E1 /* NSString+MD5.m in Sources */,
+				FCC3255D1C85C3B10030C6E1 /* PHMsgCell.m in Sources */,
 				FCC325341C8599B60030C6E1 /* PHHMModel.m in Sources */,
 				CEA1058D1C857A6A007BF5DB /* ShowApiRequest.swift in Sources */,
 				FCC3253C1C8599B60030C6E1 /* TSMathTool.m in Sources */,
@@ -983,7 +997,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
-				GCC_PREFIX_HEADER = "$(SRCROOT)/PersonalHealthHelper/Information/Third_Others/PrefixHeader.pch";
+				GCC_PREFIX_HEADER = "$(SRCROOT)/PersonalHealthHelper/PrefixHeader.pch";
 				INFOPLIST_FILE = PersonalHealthHelper/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ph.PersonalHealthHelper;
@@ -1001,7 +1015,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
-				GCC_PREFIX_HEADER = "$(SRCROOT)/PersonalHealthHelper/Information/Third_Others/PrefixHeader.pch";
+				GCC_PREFIX_HEADER = "$(SRCROOT)/PersonalHealthHelper/PrefixHeader.pch";
 				INFOPLIST_FILE = PersonalHealthHelper/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ph.PersonalHealthHelper;
