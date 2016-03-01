@@ -23,6 +23,7 @@
 		CEA105B21C858136007BF5DB /* Foundation+Log.m in Sources */ = {isa = PBXBuildFile; fileRef = CEA105B11C858136007BF5DB /* Foundation+Log.m */; };
 		CEA105F61C858E7C007BF5DB /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEA105E91C858E6C007BF5DB /* Alamofire.framework */; };
 		CEA105F71C858E7C007BF5DB /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CEA105E91C858E6C007BF5DB /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		DA1E05FA1C8596C2004E6F85 /* PHCheckHomeView.m in Sources */ = {isa = PBXBuildFile; fileRef = DA1E05F91C8596C2004E6F85 /* PHCheckHomeView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -143,6 +144,8 @@
 		CEA105AF1C857F76007BF5DB /* PHTabBarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PHTabBarViewController.m; sourceTree = "<group>"; };
 		CEA105B11C858136007BF5DB /* Foundation+Log.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Foundation+Log.m"; sourceTree = "<group>"; };
 		CEA105DE1C858E6C007BF5DB /* Alamofire.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Alamofire.xcodeproj; path = Alamofire/Alamofire.xcodeproj; sourceTree = "<group>"; };
+		DA1E05F81C8596C2004E6F85 /* PHCheckHomeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PHCheckHomeView.h; sourceTree = "<group>"; };
+		DA1E05F91C8596C2004E6F85 /* PHCheckHomeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PHCheckHomeView.m; sourceTree = "<group>"; };
 		EF2D5672FA2B596E9666C8B9 /* Pods-PersonalHealthHelper.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PersonalHealthHelper.release.xcconfig"; path = "Pods/Target Support Files/Pods-PersonalHealthHelper/Pods-PersonalHealthHelper.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -262,19 +265,12 @@
 		CEA105901C857D90007BF5DB /* Check(查询) */ = {
 			isa = PBXGroup;
 			children = (
-				CEA105911C857D90007BF5DB /* Models */,
+				DA1E05F71C8596AC004E6F85 /* Models */,
+				DA1E05F61C8596A5004E6F85 /* Views */,
 				CEA105921C857D90007BF5DB /* ViewControllers */,
-				CEA105931C857D90007BF5DB /* Views */,
 			);
 			name = "Check(查询)";
 			path = Check;
-			sourceTree = "<group>";
-		};
-		CEA105911C857D90007BF5DB /* Models */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Models;
 			sourceTree = "<group>";
 		};
 		CEA105921C857D90007BF5DB /* ViewControllers */ = {
@@ -284,13 +280,6 @@
 				CEA105A91C857E8C007BF5DB /* PHCheckViewController.m */,
 			);
 			path = ViewControllers;
-			sourceTree = "<group>";
-		};
-		CEA105931C857D90007BF5DB /* Views */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Views;
 			sourceTree = "<group>";
 		};
 		CEA105941C857D90007BF5DB /* Information(资讯) */ = {
@@ -426,6 +415,22 @@
 				CEA105F51C858E6C007BF5DB /* Alamofire.framework */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		DA1E05F61C8596A5004E6F85 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				DA1E05F81C8596C2004E6F85 /* PHCheckHomeView.h */,
+				DA1E05F91C8596C2004E6F85 /* PHCheckHomeView.m */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		DA1E05F71C8596AC004E6F85 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -676,6 +681,7 @@
 				CEA105A41C857E69007BF5DB /* PHInformationViewController.m in Sources */,
 				CEA1053E1C8579CC007BF5DB /* main.m in Sources */,
 				CEA105A71C857E7C007BF5DB /* PHLibraryViewController.m in Sources */,
+				DA1E05FA1C8596C2004E6F85 /* PHCheckHomeView.m in Sources */,
 				CEA1058D1C857A6A007BF5DB /* ShowApiRequest.swift in Sources */,
 				CEA105B21C858136007BF5DB /* Foundation+Log.m in Sources */,
 				CEA105AD1C857EA4007BF5DB /* PHSettingViewController.m in Sources */,
