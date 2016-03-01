@@ -23,6 +23,7 @@
 		CEA105B21C858136007BF5DB /* Foundation+Log.m in Sources */ = {isa = PBXBuildFile; fileRef = CEA105B11C858136007BF5DB /* Foundation+Log.m */; };
 		CEA105F61C858E7C007BF5DB /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEA105E91C858E6C007BF5DB /* Alamofire.framework */; };
 		CEA105F71C858E7C007BF5DB /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CEA105E91C858E6C007BF5DB /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		CEA106061C85C0CB007BF5DB /* NSString+MD5.m in Sources */ = {isa = PBXBuildFile; fileRef = CEA106051C85C0CB007BF5DB /* NSString+MD5.m */; };
 		DA1E05FA1C8596C2004E6F85 /* PHCheckHomeView.m in Sources */ = {isa = PBXBuildFile; fileRef = DA1E05F91C8596C2004E6F85 /* PHCheckHomeView.m */; };
 /* End PBXBuildFile section */
 
@@ -144,6 +145,8 @@
 		CEA105AF1C857F76007BF5DB /* PHTabBarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PHTabBarViewController.m; sourceTree = "<group>"; };
 		CEA105B11C858136007BF5DB /* Foundation+Log.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Foundation+Log.m"; sourceTree = "<group>"; };
 		CEA105DE1C858E6C007BF5DB /* Alamofire.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Alamofire.xcodeproj; path = Alamofire/Alamofire.xcodeproj; sourceTree = "<group>"; };
+		CEA106041C85C0CB007BF5DB /* NSString+MD5.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+MD5.h"; sourceTree = "<group>"; };
+		CEA106051C85C0CB007BF5DB /* NSString+MD5.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+MD5.m"; sourceTree = "<group>"; };
 		DA1E05F81C8596C2004E6F85 /* PHCheckHomeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PHCheckHomeView.h; sourceTree = "<group>"; };
 		DA1E05F91C8596C2004E6F85 /* PHCheckHomeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PHCheckHomeView.m; sourceTree = "<group>"; };
 		EF2D5672FA2B596E9666C8B9 /* Pods-PersonalHealthHelper.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PersonalHealthHelper.release.xcconfig"; path = "Pods/Target Support Files/Pods-PersonalHealthHelper/Pods-PersonalHealthHelper.release.xcconfig"; sourceTree = "<group>"; };
@@ -372,6 +375,8 @@
 		CEA1059E1C857D90007BF5DB /* Tools */ = {
 			isa = PBXGroup;
 			children = (
+				CEA106041C85C0CB007BF5DB /* NSString+MD5.h */,
+				CEA106051C85C0CB007BF5DB /* NSString+MD5.m */,
 				CEA105B11C858136007BF5DB /* Foundation+Log.m */,
 			);
 			path = Tools;
@@ -681,6 +686,7 @@
 				CEA105A41C857E69007BF5DB /* PHInformationViewController.m in Sources */,
 				CEA1053E1C8579CC007BF5DB /* main.m in Sources */,
 				CEA105A71C857E7C007BF5DB /* PHLibraryViewController.m in Sources */,
+				CEA106061C85C0CB007BF5DB /* NSString+MD5.m in Sources */,
 				DA1E05FA1C8596C2004E6F85 /* PHCheckHomeView.m in Sources */,
 				CEA1058D1C857A6A007BF5DB /* ShowApiRequest.swift in Sources */,
 				CEA105B21C858136007BF5DB /* Foundation+Log.m in Sources */,
