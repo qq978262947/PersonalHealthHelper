@@ -5,4 +5,6 @@ target 'PersonalHealthHelper' do
     pod 'AFNetworking'
     pod 'Masonry'
     pod 'SDWebImage'
+    pod 'MJRefresh'
+    pod 'MJExtension'
 end

@@ -85,11 +85,15 @@ strip_invalid_archs() {
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "Pods-PersonalHealthHelper/AFNetworking.framework"
+  install_framework "Pods-PersonalHealthHelper/MJExtension.framework"
+  install_framework "Pods-PersonalHealthHelper/MJRefresh.framework"
   install_framework "Pods-PersonalHealthHelper/Masonry.framework"
   install_framework "Pods-PersonalHealthHelper/SDWebImage.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "Pods-PersonalHealthHelper/AFNetworking.framework"
+  install_framework "Pods-PersonalHealthHelper/MJExtension.framework"
+  install_framework "Pods-PersonalHealthHelper/MJRefresh.framework"
   install_framework "Pods-PersonalHealthHelper/Masonry.framework"
   install_framework "Pods-PersonalHealthHelper/SDWebImage.framework"
 fi
