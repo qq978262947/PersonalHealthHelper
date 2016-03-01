@@ -7,6 +7,7 @@
 //
 
 #import "PHCheckViewController.h"
+#import "PHCheckHomeView.h"
 #import "PersonalHealthHelper-Swift.h"
 
 @interface PHCheckViewController ()
@@ -19,8 +20,12 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    
     self.view.backgroundColor = [UIColor whiteColor];
+    
+    PHCheckHomeView *homeView = [PHCheckHomeView homeView];
+    
+    [self.view addSubview:homeView];
 }
 
 #pragma mark - UITableViewDelegate
