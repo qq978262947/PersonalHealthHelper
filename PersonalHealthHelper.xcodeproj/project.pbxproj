@@ -34,10 +34,8 @@
 		FCC3253C1C8599B60030C6E1 /* TSMathTool.m in Sources */ = {isa = PBXBuildFile; fileRef = FCC325241C8599B60030C6E1 /* TSMathTool.m */; };
 		FCC3253D1C8599B60030C6E1 /* NSString+MD5.m in Sources */ = {isa = PBXBuildFile; fileRef = FCC325271C8599B60030C6E1 /* NSString+MD5.m */; };
 		FCC3253E1C8599B60030C6E1 /* UITabBarController+Common.m in Sources */ = {isa = PBXBuildFile; fileRef = FCC3252B1C8599B60030C6E1 /* UITabBarController+Common.m */; };
-		FCC3253F1C8599B60030C6E1 /* closeItemView@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FCC3252D1C8599B60030C6E1 /* closeItemView@2x.png */; };
-		FCC325401C8599B60030C6E1 /* showItemView@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FCC3252E1C8599B60030C6E1 /* showItemView@2x.png */; };
-		FCC325411C8599B60030C6E1 /* TSBtnLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = FCC325301C8599B60030C6E1 /* TSBtnLabel.m */; };
-		FCC325421C8599B60030C6E1 /* TSScrollBtn.m in Sources */ = {isa = PBXBuildFile; fileRef = FCC325321C8599B60030C6E1 /* TSScrollBtn.m */; };
+		FCC3254D1C85AECB0030C6E1 /* PHBtnsBar.m in Sources */ = {isa = PBXBuildFile; fileRef = FCC3254C1C85AECB0030C6E1 /* PHBtnsBar.m */; };
+		FCC325531C85BC7F0030C6E1 /* PHMsgTableController.m in Sources */ = {isa = PBXBuildFile; fileRef = FCC325521C85BC7F0030C6E1 /* PHMsgTableController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -184,12 +182,10 @@
 		FCC325281C8599B60030C6E1 /* PreConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PreConfig.h; sourceTree = "<group>"; };
 		FCC3252A1C8599B60030C6E1 /* UITabBarController+Common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITabBarController+Common.h"; sourceTree = "<group>"; };
 		FCC3252B1C8599B60030C6E1 /* UITabBarController+Common.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITabBarController+Common.m"; sourceTree = "<group>"; };
-		FCC3252D1C8599B60030C6E1 /* closeItemView@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "closeItemView@2x.png"; sourceTree = "<group>"; };
-		FCC3252E1C8599B60030C6E1 /* showItemView@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "showItemView@2x.png"; sourceTree = "<group>"; };
-		FCC3252F1C8599B60030C6E1 /* TSBtnLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSBtnLabel.h; sourceTree = "<group>"; };
-		FCC325301C8599B60030C6E1 /* TSBtnLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSBtnLabel.m; sourceTree = "<group>"; };
-		FCC325311C8599B60030C6E1 /* TSScrollBtn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSScrollBtn.h; sourceTree = "<group>"; };
-		FCC325321C8599B60030C6E1 /* TSScrollBtn.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSScrollBtn.m; sourceTree = "<group>"; };
+		FCC3254B1C85AECB0030C6E1 /* PHBtnsBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PHBtnsBar.h; sourceTree = "<group>"; };
+		FCC3254C1C85AECB0030C6E1 /* PHBtnsBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PHBtnsBar.m; sourceTree = "<group>"; };
+		FCC325511C85BC7F0030C6E1 /* PHMsgTableController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PHMsgTableController.h; path = ../View/PHMsgTableController.h; sourceTree = "<group>"; };
+		FCC325521C85BC7F0030C6E1 /* PHMsgTableController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PHMsgTableController.m; path = ../View/PHMsgTableController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -355,6 +351,8 @@
 		CEA105961C857D90007BF5DB /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				FCC325511C85BC7F0030C6E1 /* PHMsgTableController.h */,
+				FCC325521C85BC7F0030C6E1 /* PHMsgTableController.m */,
 				CEA105A21C857E69007BF5DB /* PHInformationViewController.h */,
 				CEA105A31C857E69007BF5DB /* PHInformationViewController.m */,
 			);
@@ -474,9 +472,9 @@
 		FCC3250C1C8599B60030C6E1 /* Third_Others */ = {
 			isa = PBXGroup;
 			children = (
+				FCC3254A1C85AEB20030C6E1 /* BtnsBar */,
 				FCC3250D1C8599B60030C6E1 /* NetWork */,
 				FCC325111C8599B60030C6E1 /* ToolClass */,
-				FCC3252C1C8599B60030C6E1 /* 滚动按钮 */,
 			);
 			path = Third_Others;
 			sourceTree = "<group>";
@@ -565,24 +563,20 @@
 			path = tabbar;
 			sourceTree = "<group>";
 		};
-		FCC3252C1C8599B60030C6E1 /* 滚动按钮 */ = {
-			isa = PBXGroup;
-			children = (
-				FCC3252D1C8599B60030C6E1 /* closeItemView@2x.png */,
-				FCC3252E1C8599B60030C6E1 /* showItemView@2x.png */,
-				FCC3252F1C8599B60030C6E1 /* TSBtnLabel.h */,
-				FCC325301C8599B60030C6E1 /* TSBtnLabel.m */,
-				FCC325311C8599B60030C6E1 /* TSScrollBtn.h */,
-				FCC325321C8599B60030C6E1 /* TSScrollBtn.m */,
-			);
-			path = "滚动按钮";
-			sourceTree = "<group>";
-		};
 		FCC325331C8599B60030C6E1 /* View */ = {
 			isa = PBXGroup;
 			children = (
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		FCC3254A1C85AEB20030C6E1 /* BtnsBar */ = {
+			isa = PBXGroup;
+			children = (
+				FCC3254B1C85AECB0030C6E1 /* PHBtnsBar.h */,
+				FCC3254C1C85AECB0030C6E1 /* PHBtnsBar.m */,
+			);
+			path = BtnsBar;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -756,9 +750,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CEA1054C1C8579CC007BF5DB /* LaunchScreen.storyboard in Resources */,
-				FCC3253F1C8599B60030C6E1 /* closeItemView@2x.png in Resources */,
 				CEA105491C8579CC007BF5DB /* Assets.xcassets in Resources */,
-				FCC325401C8599B60030C6E1 /* showItemView@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -831,15 +823,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FCC325531C85BC7F0030C6E1 /* PHMsgTableController.m in Sources */,
 				CEA105411C8579CC007BF5DB /* AppDelegate.m in Sources */,
 				FCC3253B1C8599B60030C6E1 /* UIImage+Common.m in Sources */,
 				CEA105A41C857E69007BF5DB /* PHInformationViewController.m in Sources */,
 				FCC325361C8599B60030C6E1 /* UIButton+Common.m in Sources */,
-				FCC325421C8599B60030C6E1 /* TSScrollBtn.m in Sources */,
 				FCC3253A1C8599B60030C6E1 /* NSDate+Utilities.m in Sources */,
 				CEA1053E1C8579CC007BF5DB /* main.m in Sources */,
 				CEA105A71C857E7C007BF5DB /* PHLibraryViewController.m in Sources */,
 				FCC325351C8599B60030C6E1 /* PHNetHelper.m in Sources */,
+				FCC3254D1C85AECB0030C6E1 /* PHBtnsBar.m in Sources */,
 				FCC3253E1C8599B60030C6E1 /* UITabBarController+Common.m in Sources */,
 				FCC3253D1C8599B60030C6E1 /* NSString+MD5.m in Sources */,
 				FCC325341C8599B60030C6E1 /* PHHMModel.m in Sources */,
@@ -852,7 +845,6 @@
 				FCC325381C8599B60030C6E1 /* NSDate+Helper.m in Sources */,
 				FCC325391C8599B60030C6E1 /* NSDate+Reporting.m in Sources */,
 				CEA105AA1C857E8C007BF5DB /* PHCheckViewController.m in Sources */,
-				FCC325411C8599B60030C6E1 /* TSBtnLabel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

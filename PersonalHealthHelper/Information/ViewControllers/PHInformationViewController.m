@@ -12,10 +12,10 @@
 #import "NSDate+Formatter.h"
 #import "NSString+MD5.h"
 
-#import "TSScrollBtn.h"
+#import "PHBtnsBar.h"
 
 #import "PHHMModel.h"
-@interface PHInformationViewController ()
+@interface PHInformationViewController ()<PHBtnsBarDelegate>
 @property (nonatomic,strong)NSMutableArray * listArray;
 @property (nonatomic,strong)UIView * scrollBtn;
 @end
@@ -35,6 +35,7 @@
     [super viewDidLoad];
     self.title=@"资讯";
     [self downLoadData];
+
     self.view.backgroundColor=[UIColor whiteColor];
 }
 
@@ -53,9 +54,8 @@
                             @"showapi_timestamp":usefulDate,
                             @"showapi_sign":md5Sign
                             };
-    
-    [PHNetHelper postWithParam:param andPath:path andComplete:^(BOOL success, id result) {
-        
+    [PHNetHelper postWithParam:param andPath:path andComplete:^(BOOL success, id result)
+    {
         if (success)
         {
             NSLog(@"请求成功");
@@ -87,24 +87,19 @@
         }
     }];
 }
+//创建顶部导航工具条
 -(void)createScrollBtn
 {
     NSMutableArray * names=[NSMutableArray array];
     for (int i = 0; i<self.listArray.count; i++)
     {
-        NSString * name= self.listArray[i];
+        PHHMModel * mod= self.listArray[i];
+        NSString * name= mod.name;
         [names addObject:name];
     }
-    TSScrollBtn * scrollBtn=[TSScrollBtn new];
-    self.scrollBtn=scrollBtn;
-    scrollBtn.nameArray=names;
-    [self.view addSubview:scrollBtn];
-    [scrollBtn mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.equalTo(0);
-        make.top.equalTo(0);
-        make.centerX.equalTo(0);
-        make.height.equalTo(50);
-    }];
+    PHBtnsBar * btnsbar=[PHBtnsBar btnsBarWithFrame:CGRectMake(0, NAVH+20,SCRW , BTNH) andNameArray:names];
+    [self.view addSubview:btnsbar];
+    btnsbar.delegate=self;
 }
 //获取具体每一条数据
 -(void)downLoadRowsMsgWithModel
@@ -121,12 +116,13 @@
     NSString * currentDate=[NSDate currentDateStringWithFormat:@"yyyyMM ddHHmmss"];
     NSString * usefulDate=[currentDate stringByReplacingOccurrencesOfString:@" " withString:@""];
     
-    NSString * path=@"96-108";
+    NSString * path=@"96-109";
     //这里通过model获取id,并且加入序列中
-    NSString * sign=[NSString stringWithFormat:@"showapi_appid%@showapi_timestamp%@%@",PHID,usefulDate,PHSerect];
+    NSString * sign=[NSString stringWithFormat:@"showapi_appid%@showapi_timestamp%@%@tid1",PHID,usefulDate,PHSerect];
     
     NSString * md5Sign=[sign md532BitLower];
     NSDictionary * param =@{
+                            @"tid":@1,
                             @"showapi_appid":PHID,
                             @"showapi_timestamp":usefulDate,
                             @"showapi_sign":md5Sign
@@ -173,6 +169,13 @@
      
      */
 }
+#pragma  mark PHBtnsBarDelegate
+-(void)phBtnBar:(PHBtnsBar *)bar btnTouchWihtTag:(NSInteger)tag
+{
+    //通过代理实现跳转
+    
+}
+
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];

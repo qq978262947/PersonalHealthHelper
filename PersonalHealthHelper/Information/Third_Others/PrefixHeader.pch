@@ -15,14 +15,15 @@
 #define PHSerect @"b034a3a7f7b144debe727ccebff2fd23"
 #define NAVH 44
 #define TabbarH 49
-
-
+#define SCRW [UIScreen mainScreen].bounds.size.width
+#define BTNH 48
 #define MAS_SHORTHAND
 #define MAS_SHORTHAND_GLOBALS
 #import "Masonry.h"
 
 #import "PHNetHelper.h"
-
+#import "NSDate+Formatter.h"
+#import "NSString+MD5.h"
 // Include any system framework and library headers here that should be included in all compilation units.
 // You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
 
