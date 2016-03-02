@@ -59,11 +59,11 @@
     NSString * usefulDate=[currentDate stringByReplacingOccurrencesOfString:@" " withString:@""];
     
     NSString * path=@"96-109";
-    NSString * sign=[NSString stringWithFormat:@"showapi_appid%@showapi_timestamp%@tid1%@",PHID,usefulDate,PHSerect];
+    NSString * sign=[NSString stringWithFormat:@"showapi_appid%@showapi_timestamp%@tid%@%@",PHID,usefulDate,self.tid,PHSerect];
     
     NSString * md5Sign=[sign md532BitLower];
     NSDictionary * param =@{
-                            @"tid":@1,
+                            @"tid":self.tid,
                             @"showapi_appid":PHID,
                             @"showapi_timestamp":usefulDate,
                             @"showapi_sign":md5Sign

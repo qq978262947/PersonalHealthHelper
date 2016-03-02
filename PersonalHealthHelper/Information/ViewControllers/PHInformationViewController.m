@@ -123,7 +123,7 @@
         PHHMModel * mod= self.listArray[i];
         NSNumber * tid=mod.ID;
         CGRect frame= CGRectMake(i*scrollView.frame.size.width, 0, scrollView.frame.size.width, scrollView.frame.size.height);
-        
+        //NSLog(@"%@",tid);
         PHMsgTableView * table=[PHMsgTableView phmsgTableViewWithFrame:frame andtid:tid];
         [self.scrollView addSubview:table];
         NSLog(@"%@",NSStringFromCGRect(table.frame));
