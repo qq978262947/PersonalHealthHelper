@@ -7,4 +7,5 @@ target 'PersonalHealthHelper' do
     pod 'SDWebImage'
     pod 'MJRefresh'
     pod 'MJExtension'
+    pod 'SVProgressHUD'
 end

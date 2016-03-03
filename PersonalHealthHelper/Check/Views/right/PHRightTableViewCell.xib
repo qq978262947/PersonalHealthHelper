@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="74" id="yhA-ix-sSq" customClass="PHRightTableViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="300" height="74"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="yhA-ix-sSq" id="NPt-WT-zFy">
+                <rect key="frame" x="0.0" y="0.0" width="300" height="73.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="neb-cW-3sw">
+                        <rect key="frame" x="200" y="22" width="90" height="30"/>
+                        <state key="normal" title="随行健康助手">
+                            <color key="titleColor" red="0.075567780220000005" green="0.84084535260000004" blue="0.059590149430000003" alpha="0.4237877155" colorSpace="calibratedRGB"/>
+                        </state>
+                        <connections>
+                            <action selector="clickAddFriend:" destination="yhA-ix-sSq" eventType="touchUpInside" id="r8w-tK-oxb"/>
+                        </connections>
+                    </button>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9TT-Wl-3Qh">
+                        <rect key="frame" x="10" y="43" width="42" height="20.5"/>
+                        <constraints>
+                            <constraint firstAttribute="width" relation="lessThanOrEqual" constant="100" id="Rvb-y5-aTh"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RCg-9h-PoD">
+                        <rect key="frame" x="10" y="10" width="42" height="20.5"/>
+                        <constraints>
+                            <constraint firstAttribute="width" relation="lessThanOrEqual" constant="170" id="dRN-wo-i4F"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="RCg-9h-PoD" firstAttribute="leading" secondItem="NPt-WT-zFy" secondAttribute="leading" constant="10" id="M8F-tj-xUx"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="neb-cW-3sw" secondAttribute="trailing" constant="2" id="Ovj-h8-SRx"/>
+                    <constraint firstItem="9TT-Wl-3Qh" firstAttribute="leading" secondItem="NPt-WT-zFy" secondAttribute="leading" constant="10" id="bSg-T4-Ags"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="9TT-Wl-3Qh" secondAttribute="bottom" constant="2" id="fHt-Db-Enj"/>
+                    <constraint firstItem="RCg-9h-PoD" firstAttribute="leading" secondItem="NPt-WT-zFy" secondAttribute="leadingMargin" constant="10" id="hN1-Hz-Uth"/>
+                    <constraint firstItem="neb-cW-3sw" firstAttribute="centerY" secondItem="NPt-WT-zFy" secondAttribute="centerY" id="iOi-mf-rIf"/>
+                    <constraint firstItem="RCg-9h-PoD" firstAttribute="top" secondItem="NPt-WT-zFy" secondAttribute="topMargin" constant="2" id="t1N-cf-6b1"/>
+                </constraints>
+                <variation key="default">
+                    <mask key="constraints">
+                        <exclude reference="hN1-Hz-Uth"/>
+                    </mask>
+                </variation>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="fancs" destination="9TT-Wl-3Qh" id="Iua-d1-qGu"/>
+                <outlet property="name" destination="RCg-9h-PoD" id="EmC-zq-BMv"/>
+            </connections>
+            <point key="canvasLocation" x="70" y="95"/>
+        </tableViewCell>
+    </objects>
+</document>

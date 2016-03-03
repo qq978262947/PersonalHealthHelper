@@ -8,11 +8,30 @@
 
 #import <UIKit/UIKit.h>
 
+@class PHCheckHomeView;
+
+@protocol PHCheckHomeViewDelegate <NSObject>
+
+- (void)homeView:(PHCheckHomeView *)homeView didClickSearchButton:(UIButton *)searchButton;
+
+- (void)homeView:(PHCheckHomeView *)homeView didClickShowAllButton:(UIButton *)showAllButton;
+
+@end
+
+
+
 @interface PHCheckHomeView : UIView
 
+@property (weak, nonatomic)id<PHCheckHomeViewDelegate> delegate;
+
+@property (weak, nonatomic) UITextField *textField;
+
+@property (weak, nonatomic) UIButton *btn;
 
 + (instancetype)homeView;
 
+- (void)showEnd;
 
+- (void)showText:(NSString *)text;
 
 @end

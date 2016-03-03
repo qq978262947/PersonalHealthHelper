@@ -89,6 +89,7 @@ if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "Pods-PersonalHealthHelper/MJRefresh.framework"
   install_framework "Pods-PersonalHealthHelper/Masonry.framework"
   install_framework "Pods-PersonalHealthHelper/SDWebImage.framework"
+  install_framework "Pods-PersonalHealthHelper/SVProgressHUD.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "Pods-PersonalHealthHelper/AFNetworking.framework"
@@ -96,4 +97,5 @@ if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "Pods-PersonalHealthHelper/MJRefresh.framework"
   install_framework "Pods-PersonalHealthHelper/Masonry.framework"
   install_framework "Pods-PersonalHealthHelper/SDWebImage.framework"
+  install_framework "Pods-PersonalHealthHelper/SVProgressHUD.framework"
 fi

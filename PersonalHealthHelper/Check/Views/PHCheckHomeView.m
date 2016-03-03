@@ -12,10 +12,15 @@
 #define PHBtnNormalTitle @"疾病查询"
 #define PHBtnHeightTitle @"停止查询"
 #define PHRectHeight 200
+#define PHScreenW [UIScreen mainScreen].bounds.size.width
+#define PHScreenH [UIScreen mainScreen].bounds.size.height
 
-@interface PHCheckHomeView ()
+@interface PHCheckHomeView () <UITextFieldDelegate>
+
+@property (weak, nonatomic) UITextView *textView ;
 @property (weak, nonatomic) UIView *rectView;
 @property (weak, nonatomic) UILabel *label;
+
 /**
  *  按钮
  */
@@ -28,7 +33,8 @@
 /**
  *  计时
  */
-@property (assign, nonatomic) NSTimeInterval timeInterval;;
+@property (assign, nonatomic) NSTimeInterval timeInterval;
+
 @end
 
 @implementation PHCheckHomeView
@@ -44,7 +50,7 @@
         label.numberOfLines = 0;
         label.font = [UIFont systemFontOfSize:13];
         label.textAlignment = NSTextAlignmentCenter;
-        NSString *string =  @"搜寻疾病,健康出行！！！\n身体倍好\n健健康康出行！～\n哦，耶～～～～";
+        NSString *string =  @"搜寻疾病,健康出行！！！\n身体倍好！～哦，耶～～～～";
         label.text = string;
         self.label = label;
         [self addSubview:label];
@@ -56,6 +62,35 @@
         [self addSubview:rectView];
         rectView.backgroundColor = [UIColor colorWithRed:0.1962 green:1.0 blue:0.1257 alpha:0.127074353448276];
         [self constraintRectView];
+        
+        // 显示文字的框
+        UITextView *textView = [[UITextView alloc]init];
+        self.textView = textView;
+        textView.backgroundColor = [UIColor clearColor];
+        textView.hidden = YES;
+        textView.editable = NO;
+        textView.font = [UIFont systemFontOfSize:16];
+        [self.rectView addSubview:textView];
+        [self constraintTextView];
+        
+        // 3 添加搜索框
+        UITextField *textField = [[UITextField alloc]init];
+        [self addSubview:textField];
+        self.textField = textField;
+        textField.placeholder = @"输入要搜索的疾病哦";
+        textField.backgroundColor = [UIColor greenColor];
+        textField.returnKeyType = UIReturnKeyDone;
+        textField.delegate = self;
+        [self constraintTextField];
+        
+        // 4 添加详情按钮
+        UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
+        self.btn = btn;
+        [self.rectView addSubview:btn];
+        [btn setTitle:@"🔍" forState:UIControlStateNormal];
+        [btn addTarget:self action:@selector(clickSearchBtn) forControlEvents:UIControlEventTouchUpInside];
+        [self constraintBtn];
+        
         //3 添加扫描线
         UIView *speratorView = [[UIView alloc]init];
         [rectView addSubview:speratorView];
@@ -103,6 +138,10 @@
  *  开启扫描
  */
 - (void)startCheck {
+    self.textView.hidden = YES;
+    if ([self.delegate respondsToSelector:@selector(homeView:didClickSearchButton:)]) {
+        [self.delegate homeView:self didClickSearchButton:self.moreButton];
+    }
     NSTimer *timer = [NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(healthCheck) userInfo:nil repeats:YES];
     [[NSRunLoop currentRunLoop] addTimer:timer forMode:NSRunLoopCommonModes];
     self.timer = timer;
@@ -113,16 +152,18 @@
  *  结束扫描
  */
 - (void)endCheck {
-    if (self.timeInterval){
-        [self.timer invalidate];
-    }
+    [self.timer invalidate];
     self.speratorView.hidden = YES;
     self.timeInterval = 0;
 }
 
+- (void)showEnd {
+    [self checkHealthy];
+}
+
 - (void)healthCheck {
-    if (self.timeInterval > 4) {
-        [self checkHealthy];
+    if (self.timeInterval > 10) {
+        [self endCheck];
         return;
     }
     self.speratorView.hidden = NO;
@@ -154,17 +195,19 @@
  *  约束imageview
  */
 - (void)constraintRectView {
+    CGFloat rectWidth = PHScreenW * 2 / 3;
     __weak typeof(self)weakSelf = self;
     [self.rectView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.bottom.equalTo(weakSelf.label.mas_top).offset(-2);
-        make.width.height.equalTo(@(PHRectHeight));
+        make.left.equalTo(@(30));
+        make.height.equalTo(@(rectWidth));
         make.centerX.equalTo(weakSelf);
     }];
 }
 
 - (void)constraintLabel {
     [self.label mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.width.equalTo(@290);
+        make.width.equalTo(@300);
         make.centerX.equalTo(@0);
         make.centerY.equalTo(@120);
     }];
@@ -178,6 +221,49 @@
         make.bottom.equalTo(weakSelf.rectView.mas_top).offset(PHRectHeight);
         make.centerX.equalTo(weakSelf.rectView);
     }];
+}
+
+- (void)constraintTextField {
+    __weak typeof(self)weakSelf = self;
+    [self.textField mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.width.equalTo(weakSelf.rectView);
+        make.height.equalTo(@35);
+        make.bottom.equalTo(weakSelf.rectView.mas_top).offset(-5);
+        make.centerX.equalTo(weakSelf.rectView);
+    }];
+}
+
+- (void)constraintTextView {
+    [self.textView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.left.bottom.right.equalTo(@0);
+    }];
+}
+
+- (void)constraintBtn {
+    [self.btn mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.width.height.equalTo(@50);
+        make.bottom.right.equalTo(@0);
+    }];
+}
+
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
+    [self.textField endEditing:YES];
+}
+
+- (void)showText:(NSString *)text {
+    self.textView.text = text;
+    self.textView.hidden = NO;
+}
+
+- (BOOL)textFieldShouldReturn:(UITextField *)textField {
+    [self endEditing:YES];
+    return YES;
+}
+
+- (void)clickSearchBtn {
+    if ([self.delegate respondsToSelector:@selector(homeView:didClickShowAllButton:)]) {
+        [self.delegate homeView:self didClickShowAllButton:self.btn];
+    }
 }
 
 @end
